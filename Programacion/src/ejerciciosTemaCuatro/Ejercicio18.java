@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class Ejercicio18 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Alumno alumno1 = new Alumno();
-		Alumno alumno2 = new Alumno();
+		Alumno alumno1 = new Alumno(sc.nextLine());
+		Alumno alumno2 = new Alumno("12345678B");
+		
 		System.out.println("DNI");
 		alumno1.setDni(sc.nextLine());
 		System.out.println("Nombre");

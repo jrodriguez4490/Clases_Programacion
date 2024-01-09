@@ -1,7 +1,7 @@
 package ejerciciosTemaCuatro;
 
 public class Gato {
-	private static Double precio; //con static todos los gatos costarían lo mismo siempre.
+	//private static Double precio; //con static todos los gatos costarían lo mismo siempre.
 	private String nombre;
 	private String raza;
 	private Integer edad;

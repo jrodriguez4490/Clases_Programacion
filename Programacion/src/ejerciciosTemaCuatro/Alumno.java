@@ -5,6 +5,10 @@ public class Alumno {
 	private String nombre;
 	private Integer edad;
 	private Integer nota;
+	
+	public Alumno (String dni) {
+		this.dni = dni;
+	}
 
 	public String getDni() {
 		return dni;
