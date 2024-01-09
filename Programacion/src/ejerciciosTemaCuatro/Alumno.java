@@ -1,12 +1,26 @@
 package ejerciciosTemaCuatro;
 
-public class Alumno {
+public class Alumno extends Persona {
 	private String dni;
-	private String nombre;
-	private Integer edad;
+
 	private Integer nota;
 	
-	public Alumno (String dni) {
+	private Curso cursoAlumno;
+
+	
+	
+
+	public Curso getCurso() {
+		return cursoAlumno;
+	}
+
+	public void setCurso(Curso cursoAlumno) {
+		this.cursoAlumno = cursoAlumno;
+	}
+	
+	
+
+	public Alumno(String dni) {
 		this.dni = dni;
 	}
 
@@ -18,25 +32,10 @@ public class Alumno {
 		this.dni = dni;
 	}
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public Integer getEdad() {
-		return edad;
-	}
-
-	public void setEdad(Integer edad) {
-		this.edad = edad;
-	}
-	
 	public void aprobar() {
-
-		nota = 5;
+		if (nota < 5) {
+			nota = 5;
+		}
 
 	}
 
@@ -47,7 +46,5 @@ public class Alumno {
 	public void setNota(Integer nota) {
 		this.nota = nota;
 	}
-
-
 
 }
