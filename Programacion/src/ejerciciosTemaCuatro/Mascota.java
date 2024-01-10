@@ -1,5 +1,7 @@
 package ejerciciosTemaCuatro;
 
+import java.util.Objects;
+
 public class Mascota {
 	private String nombre;
 	protected Integer edad;
@@ -24,5 +26,32 @@ public class Mascota {
 	public void setEdad(Integer edad) {
 		this.edad = edad;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Mascota [nombre=" + nombre + ", edad=" + edad + "]";
+	}
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(nombre);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Mascota other = (Mascota) obj;
+		return Objects.equals(nombre, other.nombre);
+	}
+
+
 	
 }

@@ -1,11 +1,19 @@
 package ejerciciosTemaCuatro;
 
+import java.util.Objects;
+
 public class Alumno extends Persona {
 	private String dni;
 
 	private Integer nota;
 	
 	private Curso cursoAlumno;
+	
+	public Alumno () {
+		
+		dni = dni.toUpperCase();
+		
+	}
 
 	
 	
@@ -21,7 +29,7 @@ public class Alumno extends Persona {
 	
 
 	public Alumno(String dni) {
-		this.dni = dni;
+		this.dni = dni.toUpperCase();
 	}
 
 	public String getDni() {
@@ -29,7 +37,7 @@ public class Alumno extends Persona {
 	}
 
 	public void setDni(String dni) {
-		this.dni = dni;
+		this.dni = dni.toUpperCase();
 	}
 
 	public void aprobar() {
@@ -46,5 +54,48 @@ public class Alumno extends Persona {
 	public void setNota(Integer nota) {
 		this.nota = nota;
 	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "Alumno [dni=" + dni + ", nota=" + nota + ", cursoAlumno=" + cursoAlumno + ", Nombre=" + getNombre()
+				+ ", Edad=" + getEdad() + "]";
+	}
+
+
+	public Boolean validarDNI() {
+		if(dni.isEmpty()) {
+		
+		}
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dni);
+	}
+
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Alumno other = (Alumno) obj;
+		return Objects.equals(dni, other.dni);
+	}
+	
+	
+
+
+
+
+
 
 }

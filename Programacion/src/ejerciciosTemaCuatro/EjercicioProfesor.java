@@ -12,9 +12,11 @@ public class EjercicioProfesor {
 		sc.nextLine();
 		System.out.println("Nombre");
 		profesor1.setNombre(sc.nextLine());
-		System.out.println(profesor1.getEdad());
-		System.err.println(profesor1.getNombre());
-		sc.close();
+//		System.out.println(profesor1.getEdad());
+//		System.err.println(profesor1.getNombre());
+//		sc.close();
+		System.out.println(profesor1);
+		
 
 	}
 	
