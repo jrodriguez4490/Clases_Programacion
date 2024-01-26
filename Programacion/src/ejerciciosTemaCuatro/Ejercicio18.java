@@ -1,49 +1,59 @@
 package ejerciciosTemaCuatro;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ejercicio18 {
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Curso curso1 = new Curso();
-		curso1.setIdentificador("1");
+		curso1.setIdentificador(1);
 		curso1.setDescripcion("DAM-DAW");
-		Alumno[] arrayAlumnos = new Alumno[3];
+		List<Alumno> lista = new ArrayList<>();
 
-		for (int i = 0; i < arrayAlumnos.length; i++) {
+		String dni = "";
+
+		for (int i = 0; i < 3; i++) {
+			
+			Alumno alumno = new Alumno(dni);
+			lista.add(alumno);
 
 			System.out.println("Dame el DNi");
 
-			arrayAlumnos[i] = new Alumno(sc.nextLine());
+			dni = sc.nextLine();
+
+			if (lista.get(i).validarDNI(dni)) {
+
+			}
 
 			System.out.println("Dame el nombre");
 
-			arrayAlumnos[i].setNombre(sc.nextLine());
+			lista.get(i).setNombre(sc.nextLine());
 
 			System.out.println("Dame la edad");
 
-			arrayAlumnos[i].setEdad(sc.nextInt());
+			lista.get(i).setEdad(sc.nextInt());
 
 			System.out.println("Dame la nota");
 
-			arrayAlumnos[i].setNota(sc.nextInt());
+			lista.get(i).setNota(sc.nextInt());
 
-			arrayAlumnos[i].setCurso(curso1);
+			lista.get(i).setCurso(curso1);
 
 			sc.nextLine();
 
 		}
 
-		for (int i = 0; i < arrayAlumnos.length; i++) {
-			System.out.println(arrayAlumnos[i]);
+		System.out.println(lista);
+		
 
-		}
-
-		if (arrayAlumnos[0].equals(arrayAlumnos[1])) {
+		if (lista.get(0).equals(lista.get(1))) {
 			System.out.println("Alumno 1 y 2 tienen el mismo dni");
-		} else if (arrayAlumnos[1].equals(arrayAlumnos[2])) {
+		} else if (lista.get(1).equals(lista.get(2))) {
 			System.out.println("Alumno 2 y 3 tienen el mismo dni");
-		} else if (arrayAlumnos[0].equals(arrayAlumnos[2])) {
+		} else if (lista.get(0).equals(lista.get(2))) {
 			System.out.println("Alumno 1 y 3 poseen el mismo dni");
 		} else {
 			System.out.println("No se repiten los dni");
