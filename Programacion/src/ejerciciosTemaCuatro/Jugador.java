@@ -3,15 +3,13 @@ package ejerciciosTemaCuatro;
 import java.util.Objects;
 
 public class Jugador {
-
 	private String nombre;
 	private Integer dorsal;
-	
+
 	public Jugador(String nombre, Integer dorsal) {
+		super();
 		this.nombre = nombre;
 		this.dorsal = dorsal;
-		
-		
 	}
 
 	public String getNombre() {
@@ -51,8 +49,5 @@ public class Jugador {
 	public String toString() {
 		return dorsal + " - " + nombre;
 	}
-	
-	
-	
-	
+
 }

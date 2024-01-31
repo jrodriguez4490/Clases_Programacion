@@ -3,18 +3,47 @@ package ejerciciosTemaCuatro;
 import java.util.Objects;
 
 public class Resultado {
-	
 	private Integer golesLocales;
-	private Integer golesVisitante;
-	
+	private Integer golesVisitantes;
+
 	public Resultado() {
-		this.golesLocales = 0;
-		this.golesVisitante = 0;
+		golesLocales = 0;
+		golesVisitantes = 0;
 	}
+
+	public Integer getGolesLocales() {
+		return golesLocales;
+	}
+
+	public void setGolesLocales(Integer golesLocales) {
+		this.golesLocales = golesLocales;
+	}
+
+	public Integer getGolesVisitantes() {
+		return golesVisitantes;
+	}
+
+	public void setGolesVisitantes(Integer golesVisitantes) {
+		this.golesVisitantes = golesVisitantes;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(golesLocales, golesVisitante);
+		return Objects.hash(golesLocales, golesVisitantes);
 	}
+
+	public Boolean isVictoriaLocal() {
+		return golesLocales > golesVisitantes;
+	}
+
+	public Boolean isVictoriaVisitante() {
+		return golesLocales < golesVisitantes;
+	}
+
+	public Boolean isEmpate() {
+		return golesLocales.equals(golesVisitantes);
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -24,38 +53,13 @@ public class Resultado {
 		if (getClass() != obj.getClass())
 			return false;
 		Resultado other = (Resultado) obj;
-		return Objects.equals(golesLocales, other.golesLocales) && Objects.equals(golesVisitante, other.golesVisitante);
+		return Objects.equals(golesLocales, other.golesLocales)
+				&& Objects.equals(golesVisitantes, other.golesVisitantes);
 	}
+
 	@Override
 	public String toString() {
-		return golesLocales + " - " + golesVisitante;
+		return golesLocales + "-" + golesVisitantes;
 	}
-	
-	public Boolean isVictoriaLocal() {
-		if(golesLocales > golesVisitante) {
-			return true;
-		}else {
-			return false;
-		}
-	}
-	public Boolean isVictoriaVisitante() {
-		if(golesLocales < golesVisitante) {
-			return true;
-		}else {
-			return false;
-		}
-		
-	}
-	
-	public Boolean isEmpate() {
-		if(golesLocales == golesVisitante) {
-			return true;
-		}else {
-			return false;
-		}
-	}
-	
-	
+
 }
-
-

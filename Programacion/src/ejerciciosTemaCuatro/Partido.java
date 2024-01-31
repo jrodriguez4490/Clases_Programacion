@@ -5,10 +5,6 @@ public class Partido {
 	private Equipo equipoVisitante;
 	private Resultado resultado;
 
-	public Partido() {
-
-	}
-
 	public Equipo getEquipoLocal() {
 		return equipoLocal;
 	}
@@ -33,20 +29,19 @@ public class Partido {
 		this.resultado = resultado;
 	}
 
-	@Override
-	public String toString() {
-		return equipoLocal + " vs " + equipoVisitante + " [ " + resultado + " ] ";
-	}
-
 	public Equipo getEquipoGanador() {
 		if (resultado.isVictoriaLocal()) {
 			return equipoLocal;
-		} else if (resultado.isVictoriaVisitante()) {
-			return equipoVisitante;
-		} else {
-			return null;
 		}
+		if (resultado.isVictoriaVisitante()) {
+			return equipoVisitante;
+		}
+		return null;
+	}
 
+	@Override
+	public String toString() {
+		return equipoLocal.getNombre() + " vs " + equipoVisitante.getNombre() + "[" + resultado + "]";
 	}
 
 }
