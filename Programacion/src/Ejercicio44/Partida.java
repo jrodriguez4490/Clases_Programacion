@@ -14,7 +14,7 @@ public class Partida {
 		}
 		parasito.setNombre("Blas");
 		parasito.setCodigo("B69");
-		System.out.println(parasito.getDaño()+ " " + parasito.ge);
+//		System.out.println(parasito.getDaño()+ " " + parasito.ge);
 		
 		
 	}

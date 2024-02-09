@@ -37,16 +37,16 @@ public class Equipo {
 		return equipo;
 	}
 
-	public void setEquipo(List<Personaje> equipo) {
-		if (equipo.size() < 5) {
-			if(personaje != personaje)
-			this.equipo = equipo;
-
-		} else {
-
-		}
-
-	}
+//	public void setEquipo(List<Personaje> equipo) {
+//		if (equipo.size() < 5) {
+//			if(personaje != personaje)
+//			this.equipo = equipo;
+//
+//		} else {
+//
+//		}
+//
+//	}
 	
 	
 
