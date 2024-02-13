@@ -1,5 +1,6 @@
 package e54;
 
-public class Retirada {
+public class Retirada extends Movimiento{
 
+	
 }

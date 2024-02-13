@@ -1,5 +1,5 @@
 package e54;
 
-public class Ingreso {
+public class Ingreso extends Movimiento{
 
 }

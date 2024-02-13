@@ -1,5 +1,5 @@
 package e54;
 
-public class Cargo {
+public class Cargo extends Movimiento{
 
 }
