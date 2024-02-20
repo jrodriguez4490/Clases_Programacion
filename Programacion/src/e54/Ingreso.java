@@ -28,7 +28,7 @@ public class Ingreso extends Movimiento{
 
 	@Override
 	public String toString() {
-		return "[Ingreso]" + " Fecha: " + fecha + " Importe: " + importe + " CIF : " + getDescripcion() ;
+		return "[Ingreso]" + " Fecha: " + getFecha + " Importe: " + importe + " CIF : " + getDescripcion() ;
 	}
 	
 	@Override

@@ -20,7 +20,7 @@ public class Retirada extends Movimiento{
 
 	@Override
 	public String toString() {
-		return "[Retirada]" + "Fecha: " + fecha + " Importe: " + importe  ;
+		return "[Retirada]" + "Fecha: " + getFecha() + " Importe: " + importe  ;
 
 	}
 

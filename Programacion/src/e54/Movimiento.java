@@ -21,8 +21,13 @@ public abstract class Movimiento {
 	}
 	public abstract BigDecimal getPositivo();
 	public abstract BigDecimal getNegativo();
+	
 	public abstract String getTipo();
 
+	public String toString() {
+		
+		return getTipo() + " - " + getFecha() + " - " + getImporte();
+	}
 	
 }
 

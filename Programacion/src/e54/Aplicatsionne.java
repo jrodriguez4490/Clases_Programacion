@@ -13,10 +13,12 @@ public class Aplicatsionne {
 		Retirada prueba = new Retirada();
 		
 		prueba.setFecha(fecha);
+		
 		prueba.setImporte(pruebas);
 		
 		uno.addMovimientos(prueba);
-		System.out.println(prueba);
+		
+		System.out.println(uno);
 		
 		
 		

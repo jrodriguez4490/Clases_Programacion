@@ -25,7 +25,7 @@ public class CuentaAhorros {
 	public BigDecimal getDineroTotal() {
 		BigDecimal dineroTotal = BigDecimal.ZERO;
 		for (Movimiento movimiento : movimientos) {
-			dineroTotal = dineroTotal.add(movimiento.getImporte());
+			dineroTotal = dineroTotal.add( .getImporte());
 		}
 		return dineroTotal;
 	}
@@ -73,4 +73,10 @@ public class CuentaAhorros {
 		return cargo;
 	}
 
+	@Override
+	public String toString() {
+		return "CuentaAhorros [numCuenta=" + numCuenta + ", movimientos=" + movimientos + ", cadenas=" + cadenas + "]";
+	}
+
+	
 }

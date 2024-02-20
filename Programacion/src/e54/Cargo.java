@@ -32,7 +32,7 @@ public class Cargo extends Movimiento{
 	}
 	@Override
 	public String toString() {
-		return "[Cargo]" + "Fecha: " + fecha + " Importe: " + importe + " CIF : " + getCif() ;
+		return "C" + "Fecha: " + getFecha() + " Importe: " + importe + " CIF : " + getCif() ;
 	}
 	
 	
