@@ -46,8 +46,8 @@ public class Evaluacion {
 		BigDecimal notaMedia = BigDecimal.ZERO;
 		BigDecimal alumnosCantidad = BigDecimal.ZERO;
 		for (Entry<String, BigDecimal> recorrido : alumnos.entrySet()) {
-			alumnosCantidad.add(BigDecimal.ONE);
-			notaMedia.add(recorrido.getValue());
+			alumnosCantidad = alumnosCantidad.add(BigDecimal.ONE);
+			notaMedia = notaMedia.add(recorrido.getValue());
 
 		}
 
