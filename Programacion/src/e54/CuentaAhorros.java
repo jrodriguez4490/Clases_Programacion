@@ -22,13 +22,6 @@ public class CuentaAhorros {
 		this.numCuenta = numCuenta;
 	}
 
-	public BigDecimal getDineroTotal() {
-		BigDecimal dineroTotal = BigDecimal.ZERO;
-		for (Movimiento movimiento : movimientos) {
-			dineroTotal = dineroTotal.add( .getImporte());
-		}
-		return dineroTotal;
-	}
 
 	public void addMovimientos(Movimiento movimiento) {
 		movimientos.add(movimiento);
