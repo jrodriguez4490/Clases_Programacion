@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class Prueba {
 	public static void main(String[] args) {
-		List<String> lista = new ArrayList<>();
+//		List<String> lista = new ArrayList<>();
 
 		Map<String, String> mapa = new HashMap<String, String>();
 
