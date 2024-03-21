@@ -26,19 +26,22 @@ public class Ejercicio {
 		} while (respuesta != 0);
 
 		Integer suma = 0;
+//		System.out.println(numeros.size());
+//		Esto está mejor
 		for (Integer valor : numeros.values()) {
 
 			Integer sustituto = valor;
 			suma = suma + sustituto;
-
 		}
 		System.out.println("Total números indicados : " + suma);
 
 		System.out.println("Distribución");
 
 		for (Entry<Integer, Integer> recorrido : numeros.entrySet()) {
-
-			System.out.println("\t" + "> Número " + recorrido.getKey() + " : " + recorrido.getValue() + " veces");
+			
+			
+			
+			System.out.println("\t > Número " + recorrido.getKey() + " : " + recorrido.getValue() + " veces");
 		}
 
 		sc.close();
