@@ -11,7 +11,6 @@ public class App {
 		String palabra = "";
 		List<String> pruebas = new ArrayList<String>();
 		do {
-
 			System.out.println("Dame una palabra");
 			palabra = sc.nextLine().toLowerCase();
 			pruebas.add(palabra);
